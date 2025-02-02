@@ -1,48 +1,42 @@
----
 _filters:
 ---
-[jump game](https://leetcode.com/problems/jump-game/description/?envType=study-plan-v2&envId=top-interview-150)
-# 문제 제목
-![[스크린샷 2024-12-20 오후 3.35.27.png]]
+# 🏆 Coding Test Log - {{date}}
 
-## 문제 설명
-- **출처**: [LeetCode](https://leetcode.com), [Programmers](https://programmers.co.kr), etc.
-- **문제 유형**: (예: 배열, 그래프, DP, 문자열)
-- **난이도**: (Easy, Medium, Hard)
+## 📌 Problem Information
+- **Title**:  [55. Jump Game](https://leetcode.com/problems/jump-game/)
+- **Source**: [[55. Jump Game](https://leetcode.com/problems/jump-game/)
+- **Difficulty**: ( / Medium)  
+- **Category**: string/array
 
-
-### 문제 요약
-- **입력**: (예: 정수 배열 nums와 정수 target)
-- **출력**: (예: nums 배열의 두 요소의 합이 target이 되는 인덱스 반환)
-
-### 제약 조건
-- (예: 1 <= nums.length <= 10^4)
+## 🧠 Approach
+- 1.measure maxreach, on each stage, and if in specific stage, maxreach is longer than the thing, change it.
+	2.if its less then i , return false
+	3.if its bigger than n-1: return true
+<img width="693" alt="스크린샷 2025-02-02 오후 7 29 35" src="https://github.com/user-attachments/assets/1f2102cd-dafa-43bf-9bb3-8b2c041f2697" />
 
 
+  
+-  
 
-## 풀이 계획
-1. **아이디어**: 
-   - (예: 투 포인터를 사용해 정렬된 배열에서 합 계산)
-2. **접근 방식**:
-   - (예: 배열을 순회하면서 조건에 맞는 값을 찾음)
-3. **시간 복잡도**:
-   - (예: O(n), O(n^2), O(log n))
+## 🔍 Algorithm Analysis
+- **Algorithm Used**:  
+- **Time Complexity**: O(n)  
+- **Space Complexity**: O(n)  
 
----
-
-## 코드
+## 💻 Code
 ```python
+# Paste your solution here
 class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        maxReach = 0  
+        n = len(nums)
+        for i in range(n):
+            if i > maxReach:
+                return False
+            maxReach=max(maxReach,i+nums[i])
+            if maxReach>=n-1:
+                return True
+        return False
 
-def canJump(self, nums: List[int]) -> bool:
 
-goal = len(nums) - 1 # 도달해야 하는 목표 위치
-
-for i in range (len(nums)-2,-1,-1):
-
-if i+nums[i]>=goal:
-
-goal=i
-
-return goal == 0
-
+        

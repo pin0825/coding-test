@@ -9,9 +9,9 @@ _filters:
 ## 📌 Problem Information
 - **Title**:  [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 - **Source**: [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
-- **Difficulty**: (Medium)  
+- **Difficulty**: (Medium)  <img width="683" alt="스크린샷 2025-02-02 오후 6 47 05" src="https://github.com/user-attachments/assets/2a5d5a9e-3233-4f38-8238-309bda26539f" />
+
 - **Category**: (Array / String)  
-![[스크린샷 2025-02-02 오후 6.47.05.png]]
 ## 🧠 Approach
 1.during the loop, compare previous one and latter one, if latter one is bigger, add the profit to the total.
 2change pr_p=>latter one, and if latter one is smaller than the next one, change pr_p=>next one.
